@@ -56,7 +56,7 @@ func main() {
 		}
 		privateKey, err := crypto.HexToECDSA(*privateKey)
 		if err != nil {
-			log.Fatal("private key:", err)
+			log.Fatal("private key: ", err)
 		}
 		publicKey := privateKey.Public()
 		publicKeyECDSA, ok := publicKey.(*ecdsa.PublicKey)
